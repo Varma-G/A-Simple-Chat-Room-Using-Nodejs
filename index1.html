@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Chat_Room</title>
+
+  <!-- Google-Fonts--------------------------------------------------------- -->
+
+  <link href="http://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" type="text/css">
+
+  <!-- Custom-Css_Files----------------------------------------------------- -->
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <!-- Socket.io Front-End link--------------------------------------------- -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+
+
+</head>
+
+<body>
+
+<!-- First page division asking nikname , after you enter nikname this division may disappears -->
+
+  <div id="Nickname-Box-Modal" class="Nickname-Modal">
+
+        <div class="Nickname-Modal-Content">
+            <h1 class="Nickname-Modal-Title">What's your SweetName?</h1>
+            <input id="Nickname-Input" class="custom-input" type="text" />
+        </div>
+
+    </div>
+
+<!-- Total Chat-Box division code------------------------------------------------------------- -->
+
+ <div class="Total-Chat-Box-Divison">
+
+   <!-- Left Column Online-Users-Divison -->
+     <div class="Left-Online-User-Divison">
+         <div class="Left-Online-User-Header-Container">
+             <header>
+                 <h2>Online Users</h2>
+             </header>
+         </div>
+         <div>
+             <!--Online users goes here-->
+             <ul id="Users-List">
+
+             </ul>
+         </div>
+     </div>
+
+     <!--Chat-Room-Division -->
+      <div class="Chat-Room-Division">
+          <div class="Chat-Room-Title-Container">
+                  <header>
+                       <h1>RGUKT-RKValley</h1>
+                  </header>
+          </div>
+
+           <!--Messages container-->
+           <div id="Chatroom">
+             <!-- Here whoever is typing goes here-->
+               <div id="feedback"></div>
+            </div>
+
+             <!-- Input zone -->
+            <div id="Input_Zone">
+                 <input id="message" class="vertical-align custom-input" type="text" />
+                  <button id="send_message" class="vertical-align btn" type="button">Send</button>
+            </div>
+
+      </div>
+ </div>
+
+ <!--jQuery script-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="index.js" charset="utf-8"></script>
+ <script src="chat.js" charset="utf-8"></script>
+</body>
+
+</html>
